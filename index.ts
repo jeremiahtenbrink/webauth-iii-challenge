@@ -1,5 +1,5 @@
 require( 'dotenv' ).config()
-import server from "./server";
+import server from "./src/api/server";
 
 const port = process.env.PORT || 5000;
 server.listen( port, () =>

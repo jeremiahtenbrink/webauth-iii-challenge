@@ -11,7 +11,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Users = __importStar(require("./users-model"));
-const restrict_middleware_1 = __importDefault(require("../session/restrict-middleware"));
+const restrict_middleware_1 = __importDefault(require("../auth/restrict-middleware"));
 const usersRouter = require('express').Router();
 /**
  * @api {get} /api/users/ Get all users
@@ -21,7 +21,13 @@ const usersRouter = require('express').Router();
  * @apiPermission Users
  *
  * @apiExample Get users example:
- * axios.get('/api/users');
+ * axios.get('/api/users', options: {
+ *     headers: {
+ *         authorization: "User Token"
+ *     }
+ * });
+ *
+ * @apiHeader {string} authorization User auth token.
  *
  * @apiUse Error
  *

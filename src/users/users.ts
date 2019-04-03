@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { IUser } from "./IUser";
 import * as Users from './users-model';
-import restricted from '../session/restrict-middleware';
+import restricted from '../auth/restrict-middleware';
 
 const usersRouter = require( 'express' ).Router();
 
@@ -14,7 +14,13 @@ const usersRouter = require( 'express' ).Router();
  * @apiPermission Users
  *
  * @apiExample Get users example:
- * axios.get('/api/users');
+ * axios.get('/api/users', options: {
+ *     headers: {
+ *         authorization: "User Token"
+ *     }
+ * });
+ *
+ * @apiHeader {string} authorization User auth token.
  *
  * @apiUse Error
  *

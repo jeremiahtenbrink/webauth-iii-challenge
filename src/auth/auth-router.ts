@@ -1,11 +1,14 @@
-import { Request, Response } from "express";
-import { IUser } from "../users/IUser";
+import secret from '../api/secret';
+import { error, sendError } from "../error/error";
+import express, { Request, Response } from "express";
+import { IUser, IUserFromDb } from "../users/IUser";
 import * as Users from '../users/users-model';
-import * as error from '../error/error';
 import validator from "validator";
 import bcrypt from "bcrypt";
+import { ILogin } from "./ILogin";
+import jwt from "jsonwebtoken";
 
-const registerRouter = require( 'express' ).Router();
+const authRouter = express.Router();
 
 /**
  * @api {post} /api/register Register a user
@@ -50,20 +53,20 @@ const registerRouter = require( 'express' ).Router();
  *
  *
  */
-registerRouter.post( '/', async ( req: Request, res: Response ) => {
+authRouter.post( '/register', async ( req: Request, res: Response ) => {
     try {
         
         let user = req.body;
         if ( !user.firstName || !user.lastName || !user.email ||
             !user.address ) {
-            error.sendError( error.error( 400, "Please include all the user" +
+            sendError( error( 400, "Please include all the user" +
                 " details in the request body." ), res );
             return;
         }
         
         if ( !validator.isEmail( user.email ) ) {
-            error.sendError(
-                error.error( 400, "The email given is not a email" +
+            sendError(
+                error( 400, "The email given is not a email" +
                     " address." ), res );
             return;
         }
@@ -99,4 +102,84 @@ registerRouter.post( '/', async ( req: Request, res: Response ) => {
     
 } );
 
-module.exports = registerRouter;
+
+/**
+ * @api {post} /api/login Log in a user
+ * @apiVersion 1.0.0
+ * @apiName LogInUser
+ * @apiGroup Login
+ *
+ * @apiExample Post example:
+ * axios.post('/api/login', {
+ *     email: "usersEmailAddress@yahoo.com",
+ *     password: "users password"
+ * });
+ *
+ * @apiParam {String} email         The users email address.
+ * @apiParam {string} password      The users password.
+ *
+ * @apiUse Error
+ *
+ * @apiSuccessExample {json} Example:
+ *  {
+ *     message: "Welcome first_name",
+ *     token: token
+ *  }
+ *
+ *
+ */
+authRouter.post( '/login', async ( req: Request, res: Response ) => {
+    try {
+        
+        const login: ILogin = req.body;
+        if ( !login.email || !login.password ) {
+            sendError( error( 400, "You must send a password and email" +
+                " address." ), res );
+            return;
+        }
+        
+        Users.getUsersByEmail( login.email ).then( ( user: IUserFromDb ) => {
+            
+            const samePassword = bcrypt.compareSync( login.password,
+                user.password );
+            
+            
+            if ( samePassword ) {
+                const token = generateToken( user );
+                res.status( 200 )
+                    .json( { message: `Welcome ${ user.first_name }`, token } );
+                return;
+            }
+            
+            sendError( error( 401, "Invalid credentials" ), res );
+        } ).catch( error => {
+            sendError( error, res );
+        } );
+        
+    } catch ( e ) {
+        res.status( 500 ).json( e );
+    }
+    
+} );
+
+
+function generateToken( user: IUserFromDb ) {
+    const payload = {
+        subject: user.id,
+        email: user.email,
+        first_name: user.first_name,
+        last_name: user.last_name,
+        address: user.address,
+        created_at: user.created_at,
+        updated_at: user.updated_at,
+        roles: [ 'student', 'ta' ], // pretend they come from database user.roles
+    };
+    // removed the const secret from this line <<<<<<<<<<<<<<<<<<<<<<<
+    const options = {
+        expiresIn: '1d',
+    };
+    
+    return jwt.sign( payload, secret.jwtSecret, options ); // returns valid token
+}
+
+module.exports = authRouter;

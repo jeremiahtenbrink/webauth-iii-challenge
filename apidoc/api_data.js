@@ -37,74 +37,16 @@ define({ "api": [
       "examples": [
         {
           "title": "Example:",
-          "content": "{\n   message: \"Welcome first_name\"\n}",
+          "content": "{\n   message: \"Welcome first_name\",\n   token: token\n}",
           "type": "json"
         }
       ]
     },
-    "filename": "src/login/login.ts",
+    "filename": "src/auth/auth-router.ts",
     "groupTitle": "Login",
     "sampleRequest": [
       {
         "url": "http://localhost:3200/api/login"
-      }
-    ],
-    "error": {
-      "fields": {
-        "Error XXX": [
-          {
-            "group": "Error XXX",
-            "type": "Number",
-            "optional": false,
-            "field": "status",
-            "description": "<p>The status code response.</p>"
-          },
-          {
-            "group": "Error XXX",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Error message</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error Example:",
-          "content": "ERROR XXX\n{\n    \"status\": xxx,\n    \"message\": \"Some Error Message\"\n}",
-          "type": "json"
-        }
-      ]
-    }
-  },
-  {
-    "type": "get",
-    "url": "/api/logout",
-    "title": "Log out a user",
-    "version": "1.0.0",
-    "name": "LogOutUser",
-    "group": "Login",
-    "examples": [
-      {
-        "title": "Get example:",
-        "content": "axios.get('/api/logout');",
-        "type": "json"
-      }
-    ],
-    "success": {
-      "examples": [
-        {
-          "title": "Success example:",
-          "content": "{\n    status: 200,\n   message: \"Bye bye, thanks for playing.\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "filename": "src/logout/logout.ts",
-    "groupTitle": "Login",
-    "sampleRequest": [
-      {
-        "url": "http://localhost:3200/api/logout"
       }
     ],
     "error": {
@@ -252,7 +194,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "src/register/register.ts",
+    "filename": "src/auth/auth-router.ts",
     "groupTitle": "Registration",
     "sampleRequest": [
       {
@@ -304,10 +246,23 @@ define({ "api": [
     "examples": [
       {
         "title": "Get users example:",
-        "content": "axios.get('/api/users');",
+        "content": "axios.get('/api/users', options: {\n    headers: {\n        authorization: \"User Token\"\n    }\n});",
         "type": "json"
       }
     ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "string",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>User auth token.</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Success 200": [

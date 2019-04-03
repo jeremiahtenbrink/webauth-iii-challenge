@@ -1,4 +1,7 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
@@ -6,15 +9,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     result["default"] = mod;
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+const secret_1 = __importDefault(require("../api/secret"));
+const error_1 = require("../error/error");
+const express_1 = __importDefault(require("express"));
 const Users = __importStar(require("../users/users-model"));
-const error = __importStar(require("../error/error"));
 const validator_1 = __importDefault(require("validator"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
-const registerRouter = require('express').Router();
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const authRouter = express_1.default.Router();
 /**
  * @api {post} /api/register Register a user
  * @apiVersion 1.0.0
@@ -58,17 +61,17 @@ const registerRouter = require('express').Router();
  *
  *
  */
-registerRouter.post('/', async (req, res) => {
+authRouter.post('/register', async (req, res) => {
     try {
         let user = req.body;
         if (!user.firstName || !user.lastName || !user.email ||
             !user.address) {
-            error.sendError(error.error(400, "Please include all the user" +
+            error_1.sendError(error_1.error(400, "Please include all the user" +
                 " details in the request body."), res);
             return;
         }
         if (!validator_1.default.isEmail(user.email)) {
-            error.sendError(error.error(400, "The email given is not a email" +
+            error_1.sendError(error_1.error(400, "The email given is not a email" +
                 " address."), res);
             return;
         }
@@ -98,5 +101,72 @@ registerRouter.post('/', async (req, res) => {
         res.status(500).json(e);
     }
 });
-module.exports = registerRouter;
-//# sourceMappingURL=register.js.map
+/**
+ * @api {post} /api/login Log in a user
+ * @apiVersion 1.0.0
+ * @apiName LogInUser
+ * @apiGroup Login
+ *
+ * @apiExample Post example:
+ * axios.post('/api/login', {
+ *     email: "usersEmailAddress@yahoo.com",
+ *     password: "users password"
+ * });
+ *
+ * @apiParam {String} email         The users email address.
+ * @apiParam {string} password      The users password.
+ *
+ * @apiUse Error
+ *
+ * @apiSuccessExample {json} Example:
+ *  {
+ *     message: "Welcome first_name",
+ *     token: token
+ *  }
+ *
+ *
+ */
+authRouter.post('/login', async (req, res) => {
+    try {
+        const login = req.body;
+        if (!login.email || !login.password) {
+            error_1.sendError(error_1.error(400, "You must send a password and email" +
+                " address."), res);
+            return;
+        }
+        Users.getUsersByEmail(login.email).then((user) => {
+            const samePassword = bcrypt_1.default.compareSync(login.password, user.password);
+            if (samePassword) {
+                const token = generateToken(user);
+                res.status(200)
+                    .json({ message: `Welcome ${user.first_name}`, token });
+                return;
+            }
+            error_1.sendError(error_1.error(401, "Invalid credentials"), res);
+        }).catch(error => {
+            error_1.sendError(error, res);
+        });
+    }
+    catch (e) {
+        res.status(500).json(e);
+    }
+});
+function generateToken(user) {
+    const payload = {
+        subject: user.id,
+        email: user.email,
+        first_name: user.first_name,
+        last_name: user.last_name,
+        address: user.address,
+        created_at: user.created_at,
+        updated_at: user.updated_at,
+        roles: ['student', 'ta'],
+    };
+    // removed the const secret from this line <<<<<<<<<<<<<<<<<<<<<<<
+    const options = {
+        expiresIn: '1d',
+    };
+    return jsonwebtoken_1.default.sign(payload, secret_1.default.jwtSecret, options); // returns valid token
+}
+module.exports = authRouter;
+//# sourceMappingURL=auth-router.js.map
