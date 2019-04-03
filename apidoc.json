@@ -1,0 +1,21 @@
+
+{
+  "name": "webAuth",
+  "version": "1.0.0",
+  "description": "Register users and passwords and collect users information.",
+  "title": "Custom apiDoc browser title",
+  "url": "http://localhost:3200",
+  "sampleUrl": "http://localhost:3200",
+  "header": {
+    "title": "Api",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "Footer Title",
+    "filename": "footer.md"
+  },
+  "template": {
+    "withGenerator": true,
+    "withCompare": true
+  }
+}
