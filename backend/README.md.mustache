@@ -1,0 +1,37 @@
+{{#each api}}
+    ## {{@key}}
+
+    {{#each this}}
+        ### {{type}} {{url}}
+
+        {{title}}
+
+        {{#each parameters}}
+            {{#if @first}}**Parameters**
+
+            {{/if}}
+            * **`{{{type}}}` {{field}}:** {{{description}}}
+            {{#if @last}}
+
+            {{/if}}
+        {{/each}}
+        {{#each success}}
+            {{#if @first}}**Response**
+
+            {{/if}}
+            * **`{{{type}}}` {{field}}:** {{{description}}}
+            {{#if @last}}
+
+            {{/if}}
+        {{/each}}
+        {{#each error}}
+            {{#if @first}}**Error**
+
+            {{/if}}
+            * **{{field}}:** {{{description}}}
+            {{#if @last}}
+
+            {{/if}}
+        {{/each}}
+    {{/each}}
+{{/each}}

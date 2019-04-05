@@ -37,7 +37,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Example:",
-          "content": "{\n   message: \"Welcome first_name\",\n   token: token\n}",
+          "content": "{\n   message: \"Welcome first_name\",\n   token: \"token\",\n   user: {\n       id: number,\n       email: string,\n       reset_password_token?: string,\n          password: string\n          first_name: string,\n          last_name: string,\n          address: string,\n          created_at: string,\n          updated_at: string\n   }\n}",
           "type": "json"
         }
       ]
@@ -199,6 +199,137 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "http://localhost:3200/api/register"
+      }
+    ],
+    "error": {
+      "fields": {
+        "Error XXX": [
+          {
+            "group": "Error XXX",
+            "type": "Number",
+            "optional": false,
+            "field": "status",
+            "description": "<p>The status code response.</p>"
+          },
+          {
+            "group": "Error XXX",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Error message</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error Example:",
+          "content": "ERROR XXX\n{\n    \"status\": xxx,\n    \"message\": \"Some Error Message\"\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/api/users/me",
+    "title": "Get me",
+    "version": "1.0.0",
+    "name": "GetMe",
+    "group": "Users",
+    "permission": [
+      {
+        "name": "Users",
+        "title": "Must be logged in.",
+        "description": ""
+      }
+    ],
+    "examples": [
+      {
+        "title": "Get me example:",
+        "content": "axios.get('/api/users/me', options: {\n    headers: {\n        authorization: \"User Token\"\n    }\n});",
+        "type": "json"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "string",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>User auth token.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID of the user.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Users email.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "first_name",
+            "description": "<p>Users first name.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "last_name",
+            "description": "<p>Users last name.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>Users street address.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "created_at",
+            "description": "<p>Account created at date and time.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "updated_at",
+            "description": "<p>Last time account was updated.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Example:",
+          "content": "{\n       \"id\": 1,\n       \"email\": \"Nolan_Hackett@gmail.com\",\n       \"first_name\": \"Diego\",\n       \"last_name\": \"Dach\",\n       \"address\": \"085 Considine Rue\",\n       \"created_at\": \"2019-04-01 19:19:22\",\n       \"updated_at\": \"2019-04-01 19:19:22\"\n   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/users/users.ts",
+    "groupTitle": "Must be logged in.",
+    "sampleRequest": [
+      {
+        "url": "http://localhost:3200/api/users/me"
       }
     ],
     "error": {

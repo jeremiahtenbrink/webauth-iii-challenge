@@ -1,32 +1,47 @@
-"use strict";
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importStar(require("react"));
-const logo_svg_1 = __importDefault(require("./logo.svg"));
-require("./App.css");
-class App extends react_1.Component {
+import React, { Component }         from "react";
+import "./App.scss";
+import { Route }                    from "react-router-dom";
+import NavbarComponent              from "./navbar/Navbar";
+import { NavItem, NavLink, Button } from "reactstrap";
+import Home                         from "./home/Home";
+import Login                        from "./login/Login";
+import Users                        from "./users/Users";
+import RequiresAuth                 from "./auth/requiresAuth";
+
+class App extends Component {
+    
+    state = {
+        token: "",
+        user:  ""
+    };
+    
     render() {
-        return (<div className="App">
-        <header className="App-header">
-          <img src={logo_svg_1.default} className="App-logo" alt="logo"/>
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-        </header>
-      </div>);
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <NavbarComponent title={ "UsersAuth" }>
+                        <NavItem>
+                            <NavLink href={ "/" }>Home</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href={ "/login" }>Login</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href={ "/users" }>Users</NavLink>
+                        </NavItem>
+                        <Button outline color={ "secondary" }>Logout</Button>
+                    </NavbarComponent>
+                </header>
+                <main>
+                    <Route path={ "/" } exact
+                           component={ RequiresAuth( Home ) }/>
+                    <Route path={ "/login" } component={ Login }/>
+                    <Route path={ "/users" }
+                           component={ RequiresAuth( Users ) }/>
+                </main>
+            </div>
+        );
     }
 }
-exports.default = App;
-//# sourceMappingURL=App.js.map
+
+export default App;

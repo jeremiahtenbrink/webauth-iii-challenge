@@ -9,7 +9,6 @@ Register users and passwords and collect users information.
 	- [Register a user](#register-a-user)
 	
 - [Users](#users)
-	- [Get me](#get-me)
 	- [Get all users](#get-all-users)
 	
 
@@ -134,56 +133,6 @@ ERROR XXX
 ```
 # Users
 
-## Get me
-
-
-
-	GET /api/users/me
-
-### Headers
-
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| authorization			| string			|  <p>User auth token.</p>							|
-
-### Examples
-
-Get me example:
-
-```
-axios.get('/api/users/me', options: {
-    headers: {
-        authorization: "User Token"
-    }
-});
-```
-
-### Success Response
-
-Example:
-
-```
-{
-       "id": 1,
-       "email": "Nolan_Hackett@gmail.com",
-       "first_name": "Diego",
-       "last_name": "Dach",
-       "address": "085 Considine Rue",
-       "created_at": "2019-04-01 19:19:22",
-       "updated_at": "2019-04-01 19:19:22"
-   }
-```
-### Error Response
-
-Error Example:
-
-```
-ERROR XXX
-{
-    "status": xxx,
-    "message": "Some Error Message"
-}
-```
 ## Get all users
 
 
