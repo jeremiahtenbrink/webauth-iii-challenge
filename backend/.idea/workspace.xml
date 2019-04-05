@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b9a05907-2ff2-4b14-9108-46a1098a345d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../auth-users/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/.idea/jsLinters/jslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/.idea/sasslintPlugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/src/auth/requiresAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/src/home/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/src/login/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/src/login/login.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/src/navbar/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../auth-users/src/users/Users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apidoc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apidoc/api_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apidoc/api_data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apidoc/api_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../apidoc/api_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apidoc/api_project.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apidoc/api_project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apidoc/api_project.json" beforeDir="false" afterPath="$PROJECT_DIR$/../apidoc/api_project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-users/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-users/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-users/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/App.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/App.test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-users/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/react-app-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-users/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/serviceWorker.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/src/serviceWorker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-users/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-users/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/dbConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/dbConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/dbConfig.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/data/dbConfig.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/dbConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/dbConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/migrations/20190401094304_users.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/migrations/20190401094304_users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/seeds/000_cleaner.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/seeds/000_cleaner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/seeds/001_users.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/seeds/001_users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/webAuth.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/data/webAuth.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../footer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../header.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../knexfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/_apidoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/_apidoc.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/_apidoc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/secret.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/secret.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/secret.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/server.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/ILogin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/ILogin.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/ILogin.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/auth-router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/auth-router.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/auth-router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/login-model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/login-model.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/restrict-middleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/restrict-middleware.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/auth/restrict-middleware.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/error/error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/error/error.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/error/error.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/IUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/IUser.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/IUser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/users-model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/users-model.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/users-model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/users.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/users/users.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tsconfig.json" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/users/users.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="120" column="44" lean-forward="true" selection-start-line="120" selection-start-column="44" selection-end-line="120" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/auth/restrict-middleware.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/users/users-model.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/dbConfig.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/auth/ILogin.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/auth/login-model.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/server.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/_apidoc.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/users/users-model.ts" />
+        <option value="$PROJECT_DIR$/data/dbConfig.ts" />
+        <option value="$PROJECT_DIR$/src/users/users.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\jeremiah\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Lambda\webauth-iii-challenge\backend" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration default="true" type="NodeJSConfigurationType" node-parameters="C:\Users\jeremiah\AppData\Roaming\npm\node_modules\nodemon\bin" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" nameIsGenerated="true" node-parameters="C:\Users\jeremiah\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="NodeunitConfigurationType" factoryName="Nodeunit" nameIsGenerated="true">
+      <setting name="nodePath" value="project" />
+      <envs />
+      <setting name="nodeunitModuleDir" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="testType" value="JS_FILE" />
+      <setting name="jsFile" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.index.js" />
+      <item itemvalue="Nodeunit.Unnamed" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9a05907-2ff2-4b14-9108-46a1098a345d" name="Default Changelist" comment="" />
+      <created>1554393446808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554393446808</updated>
+      <workItem from="1554393449502" duration="186000" />
+      <workItem from="1554406994465" duration="1121000" />
+      <workItem from="1554408139965" duration="2597000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3904000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23954372" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39838493" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31224763" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/data/dbConfig.js" />
+        <option value="$PROJECT_DIR$/data/dbConfig.js.map" />
+        <option value="$PROJECT_DIR$/src/users/users.js" />
+        <option value="$PROJECT_DIR$/src/users/users.js.map" />
+        <option value="$PROJECT_DIR$/src/users/users-model.js" />
+        <option value="$PROJECT_DIR$/src/users/users-model.js.map" />
+        <option value="$PROJECT_DIR$/src/users/IUser.js" />
+        <option value="$PROJECT_DIR$/src/users/IUser.js.map" />
+        <option value="$PROJECT_DIR$/src/error/error.js" />
+        <option value="$PROJECT_DIR$/src/error/error.js.map" />
+        <option value="$PROJECT_DIR$/src/auth/restrict-middleware.js" />
+        <option value="$PROJECT_DIR$/src/auth/restrict-middleware.js.map" />
+        <option value="$PROJECT_DIR$/src/auth/auth-router.js" />
+        <option value="$PROJECT_DIR$/src/auth/auth-router.js.map" />
+        <option value="$PROJECT_DIR$/src/auth/ILogin.js" />
+        <option value="$PROJECT_DIR$/src/auth/ILogin.js.map" />
+        <option value="$PROJECT_DIR$/src/api/secret.js" />
+        <option value="$PROJECT_DIR$/src/api/secret.js.map" />
+        <option value="$PROJECT_DIR$/src/api/server.js" />
+        <option value="$PROJECT_DIR$/src/api/server.js.map" />
+        <option value="$PROJECT_DIR$/src/_apidoc.js" />
+        <option value="$PROJECT_DIR$/src/_apidoc.js.map" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/index.js.map" />
+      </list>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_apidoc.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth/restrict-middleware.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/users/users-model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dbConfig.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth/login-model.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth/ILogin.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/users/users.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="120" column="44" lean-forward="true" selection-start-line="120" selection-start-column="44" selection-end-line="120" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
